@@ -1,0 +1,28 @@
+node_modules
+.vscode
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# v86
+static/v86/alpine-state.bin
+static/v86/alpine-rootfs.tar
