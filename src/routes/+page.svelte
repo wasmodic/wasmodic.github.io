@@ -58,7 +58,34 @@
                 tools={['csvtk']}
             />
         </article>
-        
+
+---
+const tableData = [
+	{ position: '0', name: 'Iron', symbol: 'Fe', atomic_no: '26' },
+	{ position: '1', name: 'Rhodium', symbol: 'Rh', atomic_no: '45' },
+	{ position: '2', name: 'Iodine', symbol: 'I', atomic_no: '53' },
+	{ position: '3', name: 'Radon', symbol: 'Rn', atomic_no: '86' },
+	{ position: '4', name: 'Technetium', symbol: 'Tc', atomic_no: '43' },
+];
+---
+
+<div class="table-wrap">
+	<table class="table caption-bottom">
+		<tbody class="[&>tr]:hover:preset-tonal-primary">
+			{
+				tableData.map((row) => (
+					<tr>
+						<td>{row.position}</td>
+						<td>{row.symbol}</td>
+						<td>{row.name}</td>
+						<td class="text-right">{row.atomic_no}</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</div>
+
         <!-- Footer -->
         <footer class="flex items-center justify-between gap-4 p-4">
             <small class="opacity-60">Modified from <a 
