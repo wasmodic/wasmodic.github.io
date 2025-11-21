@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-    <title>Terminal</title>
+    <title>Client-side Bioinformatics</title>
 </svelte:head>
 
 <main class="container mx-auto p-4">
