@@ -35,7 +35,7 @@
         
     ];
 
-const tableData = [
+const rows = [
 	{ position: '0', name: 'Iron', symbol: 'Fe', atomic_no: '26' },
 	{ position: '1', name: 'Rhodium', symbol: 'Rh', atomic_no: '45' },
 	{ position: '2', name: 'Iodine', symbol: 'I', atomic_no: '53' },
