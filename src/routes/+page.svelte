@@ -29,8 +29,8 @@
         },
         {
             name: 'ShinyLive',
-            description: 'Run R Shiny applications entirely in the browser using WebAssembly',
-            link: 'https://wasmodic.github.io/shinylive/'
+            description: 'Run R/Python Shiny applications entirely in the browser using WebAssembly',
+            link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
         }
         
     ];
