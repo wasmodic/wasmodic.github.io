@@ -69,22 +69,24 @@ const tableData = [
         </article>
 
 
-<div class="table-wrap">
-	<table class="table caption-bottom">
-		<tbody class="[&>tr]:hover:preset-tonal-primary">
-			{
-				tableData.map((row) => (
-					<tr>
-						<td>{row.position}</td>
-						<td>{row.symbol}</td>
-						<td>{row.name}</td>
-						<td class="text-right">{row.atomic_no}</td>
-					</tr>
-				))
-			}
-		</tbody>
-	</table>
-</div>
+
+<table class="min-w-full border divide-y divide-gray-300">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="px-3 py-2 text-left font-semibold">Gene</th>
+      <th class="px-3 py-2 text-left font-semibold">Expression</th>
+    </tr>
+  </thead>
+
+  <tbody class="divide-y divide-gray-200">
+    {#each rows as r}
+    <tr>
+      <td class="px-3 py-2">{r.gene}</td>
+      <td class="px-3 py-2">{r.expr}</td>
+    </tr>
+    {/each}
+  </tbody>
+</table>
 
         <!-- Footer -->
         <footer class="flex items-center justify-between gap-4 p-4">
