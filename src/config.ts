@@ -3,7 +3,7 @@
 // =============================================================================
 export const LOGGING = 1; // 0=none, 1=info, 2=debug
 export const MAX_FILE_SIZE_TO_CACHE = 100 * 1024 * 1024; // 100MB (note: SKA tutorial produces a 90MB file)
-export const DIR_TUTORIAL = "/root/tutorial";
+export const DIR_TUTORIAL = "/root/";
 export const URL_ASSETS = "https://assets.sandbox.bio";
 
 // =============================================================================

@@ -185,7 +185,7 @@ export const cli: Writable<CliStore> = writable({
 
 		const buffer = await fileObject.arrayBuffer();
 		const view = new Uint8Array(buffer);
-		await get(cli).createFile(`${DIR_TUTORIAL}/${path}`, view);
+		await get(cli).createFile(path, view);
 
 		return path;
 	},

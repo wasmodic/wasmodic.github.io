@@ -18,6 +18,8 @@
         <article class="p-0">
             <Terminal
                 on:status={(event) => (console.log('Terminal status:', event.detail))}
+                init={`mkdir -p ~/workshop && cd ~/workshop`}
+                tools={['csvtk']}
             />
         </article>
         

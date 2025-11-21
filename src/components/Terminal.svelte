@@ -246,19 +246,20 @@ function initialize(id: string): void {
 		// Run initialization commands
 		addLoadingStatus("Initializing environment...");
 		$cli.exec(init);
+		$cli.emulator!.bus.send(BUS_INPUT, 12);
 		// Set initial terminal size, otherwise sometimes doesn't call that function at load time
 		handleResize(true);
+		$cli.emulator!.bus.send(BUS_INPUT, 12);
 		// Focus cursor on command line
 		$cli.xterm.focus();
-
+		
 		// Sync date and time (otherwise continues from date/time from last boot)
 		$cli.exec(`date -s "${new Date().toString()}"`, { mode: EXEC_MODE_BUS });
 
 		// Make sure root@localhost prompt shows up on screen
 		addLoadingStatus("Putting the finishing touches...");
 		timerWaitForPrompt = setInterval(() => {
-			if (!initial_screen.includes("(none)")) {
-				$cli.exec("");
+			if (!initial_screen.includes("â")) { // because we are using starship prompt ❯
 				// Press Ctrl + L (key code 12) to show the prompt but without extra lines above it
 				$cli.emulator!.bus.send(BUS_INPUT, 12);
 				if (intro) $cli.exec(intro);
@@ -367,12 +368,12 @@ async function mountTutorialFiles(): Promise<void> {
 	// Mount files stored in this repo
 	for (const fileName of files) {
 		const url = `/data/${terminalId}/${fileName}`;
-		await $cli.mountFile(fileName, url);
+		await $cli.mountFile(`${DIR_TUTORIAL}/${fileName}`, url);
 	}
 	// Mount files stored in assets.sandbox.bio because of their size
 	for (const fileName of assets || []) {
 		const url = `https://assets.sandbox.bio/tutorials/${terminalId}/${fileName}`;
-		await $cli.mountFile(fileName, url);
+		await $cli.mountFile(`${DIR_TUTORIAL}/${fileName}`, url);
 	}
 }
 
