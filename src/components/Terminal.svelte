@@ -251,7 +251,7 @@ function initialize(id: string): void {
 		// Focus cursor on command line
 		$cli.xterm.focus();
 		$cli.xterm.options.cursorBlink = true;
-		$cli.xterm.options.fontSize = 18;	
+		// $cli.xterm.options.fontSize = 16;	
 		
 		// Sync date and time (otherwise continues from date/time from last boot)
 		$cli.exec(`date -s "${new Date().toString()}"`, { mode: EXEC_MODE_BUS });
@@ -477,10 +477,10 @@ async function mountLocalFile(event: Event): Promise<void> {
 	</div>
 </div>
 
-<div id="screen_container">
+<!-- <div id="screen_container">
     <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
     <canvas style="display: none"></canvas>
-</div>
+</div> -->
 
 <!-- Hidden input file for mounting local files -->
 <input type="file" on:change={mountLocalFile} bind:this={inputMountFiles} style="display:none" multiple />
@@ -489,7 +489,7 @@ async function mountLocalFile(event: Event): Promise<void> {
 <style>
 /* Xterm */
 #terminal {
-	height: 380px;
+	height: 400px;
 	overflow: hidden;
 }
 
