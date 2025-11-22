@@ -71,15 +71,6 @@ const examples = [
         
     ];
 
-
-const rows = [
-	{ position: '0', name: 'Iron', symbol: 'Fe', atomic_no: '26' },
-	{ position: '1', name: 'Rhodium', symbol: 'Rh', atomic_no: '45' },
-	{ position: '2', name: 'Iodine', symbol: 'I', atomic_no: '53' },
-	{ position: '3', name: 'Radon', symbol: 'Rn', atomic_no: '86' },
-	{ position: '4', name: 'Technetium', symbol: 'Tc', atomic_no: '43' },
-];
-
 </script>
 
 <svelte:head>
@@ -106,25 +97,6 @@ const rows = [
         </article>
 
 
-
-<table class="min-w-full border divide-y divide-gray-300">
-  <thead class="bg-gray-100">
-    <tr>
-      <th class="px-3 py-2 text-left font-semibold">Gene</th>
-      <th class="px-3 py-2 text-left font-semibold">Expression</th>
-    </tr>
-  </thead>
-
-  <tbody class="divide-y divide-gray-200">
-    {#each rows as r}
-    <tr>
-      <td class="px-3 py-2">{r.gene}</td>
-      <td class="px-3 py-2">{r.expr}</td>
-    </tr>
-    {/each}
-  </tbody>
-</table>
-
         <!-- Footer -->
         <footer class="flex items-center justify-between gap-4 p-4">
             <small class="opacity-60">Modified from <a 
@@ -150,7 +122,7 @@ const rows = [
   <!-- Reference Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each examples as link}
-            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-primary hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
+            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-primary hover:preset-filled-{color}-{lightModeShade} transition-all duration-200 p-6 space-y-2 group">
                 <h3 class="h4 group-hover:underline">{link.name}</h3>
                 <p class="opacity-70">{link.description}</p>
             </a>
@@ -161,7 +133,7 @@ const rows = [
 
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each references as link}
-            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-secondary hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
+            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-secondary hover:preset-filled-{color}-{lightModeShade} transition-all duration-200 p-6 space-y-2 group">
                 <h3 class="h4 group-hover:underline">{link.name}</h3>
                 <p class="opacity-70">{link.description}</p>
             </a>
