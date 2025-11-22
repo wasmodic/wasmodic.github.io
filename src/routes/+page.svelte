@@ -133,7 +133,7 @@ const examples = [
 
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each references as link}
-            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-secondary hover:preset-filled-secondary-50-950 transition-all duration-200 p-6 space-y-2 group">
+            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-secondary-50-950 transition-all duration-200 p-6 space-y-2 group">
                 <h3 class="h4 group-hover:underline">{link.name}</h3>
                 <p class="opacity-70">{link.description}</p>
             </a>
