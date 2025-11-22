@@ -4,23 +4,23 @@
     const links = [
         {
             name: 'JupyterLite',
-            description: 'JupyterLab running entirely in the browser using WebAssembly',
+            description: 'JupyterLab running entirely in the browser using WebAssembly for a rich interactive computing experience',
             link: 'https://wasmodic.github.io/jupyterlite/'
         },
         {
-            name: 'Pyodide',
-            description: 'Python running in the browser via WebAssembly',
-            link: 'https://wasmodic.github.io/pyodide/'
-        },
-        {
             name: 'WebR',
-            description: 'R running in the browser via WebAssembly',
+            description: 'R running in the browser via WebAssembly to perform bioinformatics analyses',
             link: 'https://wasmodic.github.io/webr/'
         },
         {
             name: 'Pyscript',
             description: 'PyScript makes it easy to create rich Python applications in the browser using HTML components', 
             link: 'https://wasmodic.github.io/pyscript/'
+        },
+        {
+            name: 'Pyodide',
+            description: 'Python running in the browser via WebAssembly to perform bioinformatics analyses',
+            link: 'https://wasmodic.github.io/pyodide/'
         },
         {
             name: 'Biowasm MUSCLE',
@@ -79,7 +79,8 @@
     </div>
 
     <h2 class="h4 mt-8">Demo Links</h2>
-    <p class="mt-2">Explore these WebAssembly-based demos that run entirely in your browser (<a href="https://github.com/orgs/wasmodic/repositories">templates on github</a>)</p>
+    <p class="mt-2">Explore these WebAssembly-based demos that run entirely in your browser (<a href="https://github.com/orgs/wasmodic/repositories" class="underline"
+        >templates on github</a>)</p>
      <!-- Demo Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each links as link}
@@ -90,11 +91,10 @@
         {/each}
     </section>
     <h2 class="h4 mt-8">Workshop Schedule</h2>
-    <p class="mt-2">Below is the tentative schedule for the workshop:</p>
     <div class="table-wrap">
         <table class="table caption-bottom">
-            <caption class="pt-4">We reserve the right to adapt or change the schedule at runtime</caption>
-            <thead>
+            <!-- <caption class="pt-4">We reserve the right to adapt or change the schedule at runtime</caption> -->
+            <thead >
                 <tr>
                     <th>Section</th>
                     <th>Presenter</th>
