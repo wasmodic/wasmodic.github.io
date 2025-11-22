@@ -79,7 +79,7 @@
     </div>
 
     <h2 class="h4 mt-8">Demo Links</h2>
-    <p class="mt-2">Explore these WebAssembly-based demos that run entirely in your browser</p>
+    <p class="mt-2">Explore these WebAssembly-based demos that run entirely in your browser (<a href="https://github.com/orgs/wasmodic/repositories">templates on github</a>)</p>
      <!-- Demo Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each links as link}
