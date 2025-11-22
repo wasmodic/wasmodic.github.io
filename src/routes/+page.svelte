@@ -3,9 +3,9 @@
 
     const links = [
         {
-            name: 'JupyterLite',
-            description: 'JupyterLab running entirely in the browser using WebAssembly for a rich interactive computing experience',
-            link: 'https://wasmodic.github.io/jupyterlite/'
+            name: 'Biowasm MUSCLE',
+            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm',
+            link: 'https://wasmodic.github.io/svelte-biowasm/'
         },
         {
             name: 'WebR',
@@ -23,9 +23,9 @@
             link: 'https://wasmodic.github.io/pyodide/'
         },
         {
-            name: 'Biowasm MUSCLE',
-            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm',
-            link: 'https://wasmodic.github.io/svelte-biowasm/'
+            name: 'JupyterLite',
+            description: 'JupyterLab running entirely in the browser using WebAssembly for a rich interactive computing experience',
+            link: 'https://wasmodic.github.io/jupyterlite/'
         },
         {
             name: 'ShinyLive',
