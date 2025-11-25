@@ -246,12 +246,12 @@ function initialize(id: string): void {
 		// Run initialization commands
 		addLoadingStatus("Initializing environment...");
 		$cli.exec(init);
-		$cli.emulator!.bus.send(BUS_INPUT, 12);
 		// Set initial terminal size, otherwise sometimes doesn't call that function at load time
 		handleResize(true);
-		$cli.emulator!.bus.send(BUS_INPUT, 12);
 		// Focus cursor on command line
 		$cli.xterm.focus();
+		$cli.xterm.options.cursorBlink = true;
+		// $cli.xterm.options.fontSize = 16;	
 		
 		// Sync date and time (otherwise continues from date/time from last boot)
 		$cli.exec(`date -s "${new Date().toString()}"`, { mode: EXEC_MODE_BUS });
@@ -262,7 +262,7 @@ function initialize(id: string): void {
 			if (!initial_screen.includes("â")) { // because we are using starship prompt ❯
 				// Press Ctrl + L (key code 12) to show the prompt but without extra lines above it
 				$cli.emulator!.bus.send(BUS_INPUT, 12);
-				if (intro) $cli.exec(intro);
+				
 			} else {
 				$cli.emulator!.remove_listener(BUS_OUTPUT, listenerWaitForPrompt);
 				clearInterval(timerWaitForPrompt);
@@ -275,6 +275,13 @@ function initialize(id: string): void {
 			}
 		}, 200);
 		console.log("Emulator setup complete.");
+		if (intro) {
+			console.log("Writing intro to terminal.");
+			setTimeout(() => {
+				$cli.xterm?.write(intro);
+				$cli.exec("");
+			}, 1000);
+		}
 	});
 }
 
@@ -404,7 +411,7 @@ async function mountLocalFile(event: Event): Promise<void> {
 	for (const file of files) {
 		// Try to preserve folder structure
 		const fileName = file?.webkitRelativePath || file.name;
-		paths.push(await $cli.mountFile(fileName, file));
+		paths.push(await $cli.mountFile(`/root/${fileName}`, file));
 	}
 	const pathsTxt = paths.join("\n\r# ");
 	$cli.xterm?.write(`\n\n\r\u001b[0;32m# Files mounted:\n\r# ${pathsTxt}\u001b[0m\n\n\r`);
@@ -470,10 +477,10 @@ async function mountLocalFile(event: Event): Promise<void> {
 	</div>
 </div>
 
-<div id="screen_container">
+<!-- <div id="screen_container">
     <div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
     <canvas style="display: none"></canvas>
-</div>
+</div> -->
 
 <!-- Hidden input file for mounting local files -->
 <input type="file" on:change={mountLocalFile} bind:this={inputMountFiles} style="display:none" multiple />
@@ -482,8 +489,7 @@ async function mountLocalFile(event: Event): Promise<void> {
 <style>
 /* Xterm */
 #terminal {
-	height: 400px;
-	max-height: 85vh;
+	/* height: 400px; */
 	overflow: hidden;
 }
 
