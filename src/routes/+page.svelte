@@ -117,15 +117,15 @@
     <h2 class="h4 mt-8">Resources</h2>
     <p class="mt-2">Here are some useful resources to get started with WebAssembly in bioinformatics:</p>
     <ul class="list-disc list-inside mt-4 space-y-2">
-        <li><a class="underline" href="https://webassembly.org/">WebAssembly Official Site</a></li>
-        <li><a class="underline" href="https://emscripten.org/">Emscripten Documentation</a></li>
-       <li><a class="underline" href="https://biowasm.com/">Biowasm Overview</a></li>
-       <li><a class="underline" href="https://docs.r-wasm.org/webr/latest/">WebR Documnetation</a></li>
-	       <li><a class="underline" href="https://docs.pyscript.net/2025.11.2/">PyScript Documentation</a></li>
-	       <li><a class="underline" href="https://pyodide.org/en/stable/">Pyodide Documentation</a></li>
-	       <li><a class="underline" href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite Documentation</a></li>
-	       <li><a class="underline" href="https://posit-dev.github.io/r-shinylive/">Shinylive R Documentation</a></li>
-	       <li><a class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive R Documentation</a></li>
+        <li><a target="_blank" class="underline" href="https://webassembly.org/">WebAssembly Official Site</a></li>
+        <li><a target="_blank"class="underline" href="https://emscripten.org/">Emscripten Documentation</a></li>
+       <li><a target="_blank"class="underline" href="https://biowasm.com/">Biowasm Overview</a></li>
+       <li><a target="_blank"class="underline" href="https://docs.r-wasm.org/webr/latest/">WebR Documnetation</a></li>
+	       <li><a target="_blank"class="underline" href="https://docs.pyscript.net/2025.11.2/">PyScript Documentation</a></li>
+	       <li><a target="_blank"class="underline" href="https://pyodide.org/en/stable/">Pyodide Documentation</a></li>
+	       <li><a target="_blank"class="underline" href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite Documentation</a></li>
+	       <li><a target="_blank"class="underline" href="https://posit-dev.github.io/r-shinylive/">Shinylive R Documentation</a></li>
+	       <li><a target="_blank"class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive R Documentation</a></li>
 
      
  
