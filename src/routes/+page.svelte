@@ -32,7 +32,14 @@
             name: 'ShinyLive',
             description: 'Run R/Python Shiny applications entirely in the browser using WebAssembly',
             link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
-        }
+        },
+ 		{
+            name: 'Rust with Biowasm ',
+            description: 'A Rust program compiled to WebAssembly in a BioWasm compatible way ',
+            link: 'https://wasmodic.github.io/biowasm-rust/'
+        },
+
+
         
     ];
     const tableData = [
@@ -125,7 +132,7 @@
 	       <li><a target="_blank"class="underline" href="https://pyodide.org/en/stable/">Pyodide Documentation</a></li>
 	       <li><a target="_blank"class="underline" href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite Documentation</a></li>
 	       <li><a target="_blank"class="underline" href="https://posit-dev.github.io/r-shinylive/">Shinylive R Documentation</a></li>
-	       <li><a target="_blank"class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive R Documentation</a></li>
+	       <li><a target="_blank"class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive Python Documentation</a></li>
 
      
  
