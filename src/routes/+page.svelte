@@ -67,6 +67,7 @@
             <Terminal
                 on:status={(event) => (console.log('Terminal status:', event.detail))}
                 tools={['csvtk']}
+                files={['/schedule.csv']}
             />
         </article>
 
