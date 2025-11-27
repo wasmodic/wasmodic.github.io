@@ -133,13 +133,16 @@
         <li><a target="_blank"class="underline" href="https://emscripten.org/">Emscripten Documentation</a></li>
        <li><a target="_blank"class="underline" href="https://biowasm.com/">Biowasm Overview</a></li>
        <li><a target="_blank"class="underline" href="https://docs.r-wasm.org/webr/latest/">WebR Documnetation</a></li>
+	       <li><a target="_blank"class="underline" href="https://webr.sh/">WebR IDE example</a></li>
 	       <li><a target="_blank"class="underline" href="https://docs.pyscript.net/2025.11.2/">PyScript Documentation</a></li>
 	       <li><a target="_blank"class="underline" href="https://pyodide.org/en/stable/">Pyodide Documentation</a></li>
 	       <li><a target="_blank"class="underline" href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite Documentation</a></li>
 	       <li><a target="_blank"class="underline" href="https://posit-dev.github.io/r-shinylive/">Shinylive R Documentation</a></li>
-	       <li><a target="_blank"class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive Python Documentation</a></li>
+	       <li><a target="_blank"class="underline" href="https://shinylive.io/r/examples/">Shinylive R Examples</a></li>
+		   	<li><a target="_blank"class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive Python Documentation</a></li>
+			<li><a target="_blank"class="underline" href="https://shinylive.io/py/examples/">Shinylive Python Exmaples</a></li>
 
-     
+
  
     </ul>
 
