@@ -4,11 +4,7 @@
 
 
     const links = [
-          {
-            name: 'Biowasm MUSCLE',
-            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm',
-            link: 'https://wasmodic.github.io/svelte-biowasm/'
-        },{
+        {
             name: 'WebR',
             description: 'R running in the browser via WebAssembly to perform bioinformatics analyses',
             link: 'https://wasmodic.github.io/webr/'
@@ -38,10 +34,21 @@
             description: 'Run R Shiny applications entirely in the browser using WebAssembly',
             link: 'https://shinylive.io/r/app/#code=NobwRAdghgtgpmAXGKAHVA6ASmANGAYwHsIAXOMpMAGwEsAjAJykYE8AKAZwAtaJWAlAB0IdJiw4BzSampFSAJmEQRnOKQxq4AE3YBGBQGZDAFgCsh5SJhQA1nAD6zCNqIwHagI4ACADwBabwAzAFcIAlJaEnYIbwBebzMABgFvEBFvb1QoTnIkrlhZOHYCdiEwAEFy3HKAYWrygHEGsAAVcoFcbwguxjhZKAI4eO9WrABVAFFO72JqajQ1EfKOkQBfEWs7R08QqDpSVgcgokYHKAA3ST9A0PDI6NIWSXVzq67YhOTU9Nis7j62k4N28fVQ7CejBepDekg+ykyOQItFomQC-0BwIA1N5jBksjk8uw+KRWkRxqQggAOdhIlEzOYLVBLBIrMDKDYqCAAOQcWEmFQAIgBlEEmJKZbwAYhEQUJngcdAgcGB6NKVggJ0Y3nYPj43j0iF5-KFwp++K8IJs9icUBcbg8cE87G++N2+yt2wc7oORy1sN1HxGrr++LluQVSpVINK+My4dIkb4Kpqf0y2VycHy5QAAn0oNoHABFareTydOPeLypyXecpYhppst7aj4jmbTXyhzkAAepBBGfI7ATSeVnC6jMWw1ZYCEm3ZHal3n8K9Xa-XG83W+3O9XIiXADEKsLWkWCYw1Ix98vd7e7-fNx3shfHCOQXcIlEIBC++a-lHVUCXIL1kWhSB-UguhWecBGAYA9AAXQQ-EAJBADgHCbgWHYADUgAPm8JJkNDP5ciIVBaCCCB5BwihJFIbgcOTThUgAUlY7wTHiBIUnxfFYnRag6IYpix1SAB6Ti+L+fMgTQtBZA4LxFQoGIZg-B5v1oP9a1obQexBYllwNVIACopKbPSQU4EJ6DKMAAD0c1LNkunQvSDJxRCEUlS1BOY4APO8HEFGI2sfTQgKgpxEwwslTwLn2QDvBCSkqTJABJMhdRbVJAjxJttCgJ4MCCZh4DKJtMishI9JrWsqydEZq0rRErjPBJ4DtXVEuoFj6trYC+EkTgKk4A9BlIU5gQSI8ABlhUmSsfLWHz8VcDACH2ah2EYeg+G0Xo4ALFj1kXG8H0uq6t2vWoiDCft6ByaMKnE2pxMacT2ggJdrr+-7-A7YgHocJ61GSjSvy4J0WLSfFKJ1ISIHoxivFhuIeJ0yU+lIEJGG-NRSG5WAVV2-p2CSLoTAZeyqjwOoWmaem2g6AQVvxba-MCQdijRiciHmKdllnBc-jB6N0TCOhci4UgQIOWl5mrOsRbZ-EnnoITh0m052HF8dvCEi44D6kZY0qFp6mZpmahZ9k1YgTlryCWgex0WYBfui9glObx9ZEcWHDmZLYz+CphalPQggAdipegTEbTJagj4woCSBQCET7xGgjuBDD0KA9Ez+m-laCOghjoIkiSFYIA1X6Acb+9r3GDLrybjvdw7EJUXRIJqB77QAAUoBeSrMkiUghJH5UdvKAAhZ7vDumBUCITgwK-bwAHUwO4bwi38ThiD6bwD1oahyCvdl6o37Q4Cexg5qgVh7vAys74flgZ5N8eGs4Og99GBZVQKleyngXaXzgNfKCYAACyfBaAwBCDAbwlxoGj2GGeY+pw4CICzg1QhDUYD6gSHoLoNgDIJHFF0XqIRpzeAUJTKs5BUAjD0BWJsnDaw2D4D-OeVUshyFIAAeVSqA9+YBxayHkKWbgcBaCSG4P2GchhkioB7B0AakoNZCTEaQCR9ldGODfqsLhbYRD1wup3Gxa5rzCmgcbK8P1rG2NsR2S8Tj3xhE-NEPgEiuhvwCY1TgG8SBY20EEAcLA1DHHlNrCM3Y4C-g7JkQ8rt3asH8HQEhj1nraG8CQYIIR5jeCKk8MMJTqBB3umQEOtSYT63YJEgAJF4HyLs3aFlYJQz0PZhxVJqQ9WG5k9AYAUKk4IF8r7u3RPmT8xt2C-FrJE4ArTLiSDPHhWqEAJEtIgdM6BXQ4qrUmUE1KLTpHCJBH0Fw0Ch7CKWZWYGdSYwNNBs9Tgw5DmAnYAINpTofKZEiQ4GR-Z0TlKgKVcqxRWp+yXgkaA8AvkvNIP1OFqKRg5AwBAFB0DaClFRadcxXJazSDBc0oIoLhFdCgKTKh8K1BdFYGbBpXRIHUBGOLNmwU4UvAdHMP5vLBH8vcL2cCdKvkLHoCbVlD0ZgXAAFYhFyCMfwSQMBmC6BvAAXgwgAbKkBsgjj77FfBfapNhcX7HYHQ6MCRA7ByNXC1gOSKbsoyd0yhzrBHSq+XCieYEhLC0XksIlOpXrvU+q0VI+pIEzIKUeE8Z5ZKcAIQ1BlC9nrptrCymcd0Hq10IT6whDE4DwAcCQiASCbWB11QwvQhr8SnNJdKQp4iLnGIcG-G5FAgGtCgJrYoyy23xh+ToP5wAJz2T0i5FA7UOhxSXC2p2EAeB8FYBUdA7Ae7ascdAgQYA1gISAA'
         },
+        {
+            name: 'Biowasm',
+            description: 'Bioinformatics tools compiled to WebAssembly to run entirely in your browser',
+            link: 'https://wasmodic.github.io/biowasm-muscle/'
+
+        },
  		{
             name: 'Rust with Biowasm ',
             description: 'A Rust program compiled to WebAssembly in a BioWasm compatible way ',
             link: 'https://wasmodic.github.io/biowasm-rust/'
+        },
+        {
+            name: 'Biowasm MUSCLE (Svelte)',
+            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm and Svelte',
+            link: 'https://wasmodic.github.io/svelte-biowasm/'
         },
 
 
